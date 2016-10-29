@@ -1,0 +1,16 @@
+Architect/Library
+Architect/Temp
+*.pidb
+*.sln
+*.userprefs
+*.csproj
+*.orig
+*.orig.meta
+*.DS_Store
+Architect/thumbs.db
+Architect/.mayaSwatches
+Architect/workspace.mel
+*.unityproj
+*.pidb
+*.meta
+Architect/workspace.mel.meta

@@ -14,3 +14,5 @@ Architect/workspace.mel
 *.pidb
 *.meta
 Architect/workspace.mel.meta
+*.pyc
+blueprint.txt

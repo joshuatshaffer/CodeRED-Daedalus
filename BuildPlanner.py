@@ -70,7 +70,27 @@ def list_invalid_blocks(blocks, x_size, y_size):
 
     return invalid_blocks
 
+def plan_construction(blocks):
+    #sorting blocks into construction order
+    tempList = []
+    for z in range(0, 11):
+        for y in range(12, -1, -1):
+            for x in range(0, 11):
+                for block in blocks:
+                    if block.x == x and block.y == y and block.z == z:
+                        tempList.append(block)
+    return tempList
 
+def execute_construction(instructionSet):
+    #move torso
+    #move elbow
+    #move wrist
+    
+    #move yz stabilizer
+    #move xy stabilizer
+    #move gripper
+    
+                        
 if __name__ == "__main__":
     blocks, x_size, y_size, z_size = load_blueprint()
     invalid_blocks = list_invalid_blocks(blocks, x_size, y_size)
@@ -78,3 +98,5 @@ if __name__ == "__main__":
         raise InvalidBlockPlacement(invalid_blocks)
     else:
         print "This structure is possible to build."
+    instructionSet = plan_construction(blocks)
+    execute_construction(instructionSet)

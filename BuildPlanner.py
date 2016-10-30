@@ -9,8 +9,10 @@ blueprintFilename = "blueprint.txt"
 def new_grid3d(length, width, depth, fillValue):
     return new_grid(length, width, new_list(depth, fillValue))
 
+
 def new_grid(length, width, fillValue):
     return new_list(length, new_list(width, fillValue))
+
 
 def new_list(length, fillValue):
     return [copy.deepcopy(fillValue) for _ in range(0,length)]
@@ -70,6 +72,7 @@ def list_invalid_blocks(blocks, x_size, y_size):
 
     return invalid_blocks
 
+
 def plan_construction(blocks):
     #sorting blocks into construction order
     tempList = []
@@ -81,16 +84,7 @@ def plan_construction(blocks):
                         tempList.append(block)
     return tempList
 
-def execute_construction(instructionSet):
-    #move torso
-    #move elbow
-    #move wrist
-    
-    #move yz stabilizer
-    #move xy stabilizer
-    #move gripper
-    
-                        
+
 if __name__ == "__main__":
     blocks, x_size, y_size, z_size = load_blueprint()
     invalid_blocks = list_invalid_blocks(blocks, x_size, y_size)
@@ -99,4 +93,3 @@ if __name__ == "__main__":
     else:
         print "This structure is possible to build."
     instructionSet = plan_construction(blocks)
-    execute_construction(instructionSet)
